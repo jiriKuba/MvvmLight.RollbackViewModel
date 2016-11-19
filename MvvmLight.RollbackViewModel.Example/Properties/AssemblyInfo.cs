@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MvvmLight.RollbackViewModel")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("MvvmLight.RollbackViewModel.Example")]
+[assembly: AssemblyDescription("Library for reverting viewModel changes example")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Jiří Kuba")]
 [assembly: AssemblyProduct("MvvmLight.RollbackViewModel")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright © jiriKuba 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
