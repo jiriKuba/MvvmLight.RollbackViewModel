@@ -73,7 +73,7 @@ namespace MvvmLight.RollbackViewModel
         /// <summary>
         /// Revert viewModel changes
         /// </summary>
-        public virtual void Restore()
+        public virtual void Rollback()
         {
             if (this._modelHistory != null)
             {

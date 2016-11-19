@@ -35,7 +35,7 @@ namespace MvvmLight.RollbackViewModel.Example
         protected override void OnClosed(EventArgs e)
         {
             if (this._settingViewModel.WasChangeMade())
-                this._settingViewModel.Restore();
+                this._settingViewModel.Rollback();
 
             base.OnClosed(e);
         }

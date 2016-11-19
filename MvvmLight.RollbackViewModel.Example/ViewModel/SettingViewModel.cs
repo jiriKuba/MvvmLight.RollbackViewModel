@@ -182,7 +182,7 @@ namespace MvvmLight.RollbackViewModel.Example.ViewModel
         {
             if (this.WasChangeMade())
             {
-                this.Restore();
+                this.Rollback();
             }
 
             if (w != null)
