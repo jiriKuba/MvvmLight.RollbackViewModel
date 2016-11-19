@@ -20,26 +20,28 @@ namespace MvvmLight.RollbackViewModel
         protected Boolean _risePropertyChangeWhenRestore;
         
         /// <summary>
-        /// 
+        /// Constructor
         /// </summary>
         public RollbackViewModelBase()
             : base()
         {
-            this._risePropertyChangeWhenRestore = false;
-            this._wasModelChanged = false;
-            this._isRestoring = false;
+            
         }
 
         /// <summary>
-        /// 
+        /// Basic setup
         /// </summary>
         public virtual void Init()
         {
+            this._risePropertyChangeWhenRestore = false;
+            this._wasModelChanged = false;
+            this._isRestoring = false;
+
             this._modelHistory = this.Clone();
         }
 
         /// <summary>
-        /// 
+        /// ViewModel was changed
         /// </summary>
         public virtual Boolean WasChangeMade()
         {
@@ -58,6 +60,9 @@ namespace MvvmLight.RollbackViewModel
             this._wasModelChanged = true;
         }
 
+        /// <summary>
+        /// Commit viewModel changes
+        /// </summary>
         public virtual void Commit()
         {
             this._wasModelChanged = false;
@@ -65,6 +70,9 @@ namespace MvvmLight.RollbackViewModel
             this._modelHistory = this.Clone();
         }
 
+        /// <summary>
+        /// Revert viewModel changes
+        /// </summary>
         public virtual void Restore()
         {
             if (this._modelHistory != null)
@@ -92,6 +100,9 @@ namespace MvvmLight.RollbackViewModel
             this._wasModelChanged = false;
         }
 
+        /// <summary>
+        /// Clone this object
+        /// </summary>
         public virtual Object Clone()
         {
             return this.MemberwiseClone();
